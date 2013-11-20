@@ -1,0 +1,2 @@
+vcs -full64 -debug_all  -sverilog -ntb_opts uvm-1.1 -timescale="1ns/100ps" -l comp.log -debug_all +vcs+vcdpluson ../rtl/imageproc.sv ../rtl/imageproc_io.sv ../rtl/imageproc_test_top.sv ../rtl/ram.v ./test.sv +define+UVM_NO_DEPRECATED+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR image.c
+./simv +UVM_TESTNAME=test_rotate 

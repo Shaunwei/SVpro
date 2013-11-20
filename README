@@ -1,0 +1,41 @@
+
+
+Location of Project Directory : /home/faculty/IMAGEPROC
+Compile script provide: tb/run
+To run simulation with 1 ROTATE command : simv +UVM_TESTNAME=test_rotate
+To run simulation with 1 ZOOM command : simv +UVM_TESTNAME=test_zoom
+
+
+To run simulation with 10 random commands : simv +UVM_TESTNAME=test_base +NUM=10
+
+
+
+File that you should be editing : rtl/imageproc.sv
+
+
+Testbench directory
+---------------------
+test.sv    // Program that includes all the different tests
+reset_sequence.sv  // reset code
+imageproc_env.sv   // environment code
+reset_agent.sv   // reset agent
+input_agent.sv   // input agent
+packet_sequence.sv   // sequencer 
+mem.image    // memory image of 320x320 image , RGG values
+test_collection.sv  // all your tests get included here
+packet_rotate.sv  //  rotate test
+packet_zoom.sv // zoom test
+packet.sv  // all your random variables are here
+driver.sv  // driver for DUT
+run     // compile & run script
+image.c  // C code to display image on screen
+
+
+
+RTL directory
+-------------
+
+imageproc.sv   // YOUR CODE
+imageproc_io.sv // SystemVerilog interface / clocking definition
+imageproc_test_top.v  // Top level module
+ram.v   // Memory definition
