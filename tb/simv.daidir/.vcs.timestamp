@@ -446,17 +446,13 @@
 /projects/dft2005fall/bgreene/vcs/etc/uvm-1.1/vcs/uvm_custom_install_vcs_recorder.sv
 comp.log
 uvm-1.1
-58
+51
 sysc_uni_pwd=/DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb
 module=() {  eval `/usr/bin/modulecmd bash $*`_}
 XUSERFILESEARCHPATH=./%N:/usr/lib/X11/app-defaults/%N:/LINKS/X11R5/lib/X11/%N
-XDM_MANAGED=method=classic
-XDG_SESSION_COOKIE=ebc3a94dd94821284225d8c300000026-1384922390.428356-786561899
 XDG_MENU_PREFIX=kde4-
 XDG_DATA_DIRS=/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share
 XCURSOR_THEME=default
-XAUTHORITY=/var/run/kdm/.XauthC19WmU
-WINDOWPATH=7
 VMR_MODE_FLAG=64
 VCS_UVM_HOME=/projects/dft2005fall/bgreene/vcs/etc/uvm-1.1
 VCS_MODE_FLAG=64
@@ -467,10 +463,10 @@ VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH=amd64
 UNAME=/bin/uname
 TOOL_HOME=/projects/dft2005fall/bgreene/vcs/amd64
-SSH_AUTH_SOCK=/tmp/ssh-WEPUvL1039/agent.1039
+SSH_CONNECTION=129.210.16.28 53593 129.210.16.78 22
+SSH_CLIENT=129.210.16.28 53593 22
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
-SSH_AGENT_PID=1062
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1133,unix/unix:/tmp/.ICE-unix/1133
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/11350,unix/unix:/tmp/.ICE-unix/11350
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QT_PLUGIN_PATH=/home/xwei/.kde/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/
@@ -479,12 +475,13 @@ QTINC=/usr/lib64/qt-3.3/include
 QTDIR=/usr/lib64/qt-3.3
 PROFILEHOME=
 OVA_UUM=0
+NXSESSIONID=linux60808-1005-89700DAB1120BF8B472C66B621926D73
 MODULESHOME=/usr/share/Modules
 MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
 LOADEDMODULES=
 LESSOPEN=|/usr/bin/lesspipe.sh %s
 LC_ALL=C
-KRB5CCNAME=FILE:/tmp/krb5cc_3837_gbTWmc
+KRB5CCNAME=FILE:/tmp/krb5cc_3837_tQmHRN
 KONSOLE_DBUS_SESSION=/Sessions/1
 KONSOLE_DBUS_SERVICE=:1.24
 KDE_SESSION_VERSION=4
@@ -497,12 +494,8 @@ G_BROKEN_FILENAMES=1
 GTK_RC_FILES=/etc/gtk/gtkrc:/home/xwei/.gtkrc::/DCNFS/users/student/xwei/.kde/share/config/gtkrc
 GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/xwei/.gtkrc-2.0::/DCNFS/users/student/xwei/.kde/share/config/gtkrc-2.0
 GS_LIB=
-GPG_AGENT_INFO=/tmp/gpg-TS26zF/S.gpg-agent:1088:1
-GNOME_KEYRING_SOCKET=/tmp/keyring-lSfrqH/socket
-GNOME_KEYRING_PID=1035
-DM_CONTROL=/var/run/xdmctl
-DESKTOP_SESSION=default
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-yE0uThvqCn,guid=13968a23211a8307c471efa90006c8fb
+GPG_AGENT_INFO=/tmp/gpg-BzGQ4b/S.gpg-agent:11314:1
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-XzZOchlrwd,guid=d46cd63414e161dcb61b104600001e60
 CVS_RSH=ssh
 COLORFGBG=15;0
 0
@@ -514,7 +507,7 @@ COLORFGBG=15;0
 1384923533 driver.sv
 1384923533 packet.sv
 1384923533 packet_sequence.sv
-1384923533 input_agent.sv
+1384930912 input_agent.sv
 1384923533 imageproc_env.sv
 1384923533 test_collection.sv
 1378787799 /projects/dft2005fall/bgreene/vcs/etc/uvm-1.1/vcs/uvm_vcs_record_interface.sv
@@ -655,7 +648,7 @@ COLORFGBG=15;0
 1384923533 ../rtl/ram.v
 1384923533 ../rtl/imageproc_test_top.sv
 1384923533 ../rtl/imageproc_io.sv
-1384923705 ../rtl/imageproc.sv
+1385421091 ../rtl/imageproc.sv
 1378787799 /projects/dft2005fall/bgreene/vcs/etc/uvm-1.1/vcs/uvm_custom_install_vcs_recorder.sv
 1378787799 /projects/dft2005fall/bgreene/vcs/etc/uvm-1.1/uvm_pkg.sv
 1378786642 /projects/dft2005fall/bgreene/vcs/amd64/lib/vcsd.tab
@@ -666,4 +659,4 @@ COLORFGBG=15;0
 1378787154 /projects/dft2005fall/bgreene/vcs/amd64/lib/libvirsim.so
 1378786920 /projects/dft2005fall/bgreene/vcs/amd64/lib/liberrorinf.so
 1378786727 /projects/dft2005fall/bgreene/vcs/amd64/lib/libsnpsmalloc.so
-1384923744 simv.daidir
+1385421128 simv.daidir

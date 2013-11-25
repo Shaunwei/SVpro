@@ -1666,6 +1666,18 @@ typedef void (*FuncPtr)();
 #ifdef __cplusplus
 extern "C" {
 #endif
+void  hsM_0_0(UB  * I770, scalar  val);
+void  hsM_0_1(UB  * I770, scalar  val, U  I901, scalar  * I900);
+void  hsM_0_2(UB  * I770);
+void  hsM_0_5(UB  * I770, UB  val);
+void  hsM_1_0(UB  * I770, scalar  val);
+void  hsM_1_1(UB  * I770, scalar  val, U  I901, scalar  * I900);
+void  hsM_1_2(UB  * I770);
+void  hsM_1_5(UB  * I770, UB  val);
+void  hsM_5_0(UB  * I770, scalar  val);
+void  hsM_5_1(UB  * I770, scalar  val, U  I901, scalar  * I900);
+void  hsM_5_2(UB  * I770);
+void  hsM_5_5(UB  * I770, UB  val);
 void  hsG_0(struct dummyq_struct * I885, EBLK  * I886, U  I657);
 U   hsG_1(U  I898);
 #ifdef __cplusplus

@@ -1,0 +1,38 @@
+set ucliGUI::state
+set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synopsys::xml set_array_limit <data limit="50" />
+synopsys::xml set_depth_limit <data limit="100" />
+synopsys::xml set_string_limit <data limit="1000" />
+synopsys::xml set_only_active_frame <data value="1" />
+synopsys::xml set_variable_frame_id <data value="1" />
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD0
+set ::dve_fid VPD0
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket linux60802 41118
+synUtils::sendTool -active {_icl_start_rpc -version "H-2013.06-3_Full64" -sync_file /tmp/vcs_dve_rpc.xwei.11058}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.xwei.11058}
+ucliGUI::vpdAddHierarchy -scope uvm_pkg -depth 1 -file /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/inter.vpd; synopsys::dump -flush VPD0
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/dve/schematic.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/base.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/enable.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/netlist.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/method.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/strokes/stroke_defaults.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/dialogs/ObjectListInfo.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/DialogPathSchematicFanInOut.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/dve/driversloads.tcl
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
