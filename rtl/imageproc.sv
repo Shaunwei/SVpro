@@ -1,7 +1,14 @@
-// Note
-// this is the example from class
-// we are just going to remove the green component from each pixel
-// 
+/*********************************************************************\
+Verilog Project: UVM based image processor
+
+Function: 0 = ROTATE
+          1 = ZOOM
+          2 = BLACKWHITE
+          3 = INVERSION
+ 
+\*********************************************************************/
+
+
 module imageproc(
 input clk,
 input rst_n,
@@ -20,33 +27,64 @@ reg [31:0] datain0,datain1;
 wire  [31:0] dataout0,dataout1;
 
 ram ram(clk,WRITE0,WRITE1,READ0,READ1,addr_wr0,addr_wr1,addr_rd0,addr_rd1,datain0,datain1,dataout0,dataout1);
-reg data_valid,data_valid2,data_valid3,data_valid4;
-reg [63:0] data,data2,data3,data4;
+reg data_valid,data_valid2,data_valid3,data_valid4,data_valid5,data_valid6,data_valid7;
+reg [63:0] data,data2,data3,data4,data5,data6,data7;
 reg [4:0] state;
 reg refresh;
 reg busy=0; 
 
+   reg [1:0] cmd_m =2'b00;
+   
 //initial refresh=0;
 
    
 always @(*) begin
- refresh = (addr_wr1==102399) ; 
-
-   
+ refresh = (addr_wr1==102399) ;  
+ 
 end
 
 
+always @(*) begin
+  case(cmd_m)
+    2'b00 : begin
+       //rotate
+       data2 <= data4;
+       data_valid2 <= data_valid4;
+    end
+    
+    2'b01 : begin
+       //zoom
+       data2 <= data5;
+       data_valid2 <= data_valid5;
+       end
+    
+    2'b10 : begin
+       //blackwhite
+       data2 <= data6;
+       data_valid2 <= data_valid6;
+    end
+ 
+    2'b11 : begin
+       //inversion
+       data2 <= data7;
+       data_valid2 <= data_valid7;
+    end         
+  endcase // case (cmd_m)
+end // always @ (*)
 
 
+   
+   
 
 
 
 
 
 read_mem read_orig(clk,rst_n,!cmd_valid,READ0,addr_rd0,dataout0,data,data_valid); 
-//grayscale  #(1) grayscale_orig   (clk,data,data_valid, data2,data_valid2); 
-rotate #(45) rotate_orig (clk,data,data_valid, data2,data_valid2);
-//zoom #(2) zoom_orig (clk,data,data_valid, data2,data_valid2);
+grayscale  grayscale_orig   (clk,data,data_valid, data6,data_valid6);//6 
+rotate #(10) rotate_orig (clk,data,data_valid, data4,data_valid4);//4
+zoom #(2) zoom_orig (clk,data,data_valid, data5,data_valid5);//5
+inversion  inversion_orig (clk,data,data_valid, data7,data_valid7);//7
 write_mem #(131072) write_tmp  (clk,data2,data_valid2,WRITE0,addr_wr0, datain0);
 read_mem #(131072) read_tmp (clk,rst_n,(addr_rd0!=102399),READ1,addr_rd1,dataout1,data3,data_valid3);
 write_mem write_orig  (clk,data3,data_valid3,WRITE1,addr_wr1, datain1); 
@@ -56,90 +94,95 @@ endmodule
 
 //write and read modules
 
-module write_mem(input clk, input [63:0] data, input valid, output reg WRITE, output reg [31:0] addr, output reg [31:0] datain); 
-parameter OFFSET = 0; 
-wire [8:0] x,y; 
-assign x = (data [49:41]<320)?data[49:41]:0; 
-assign y = (data[40:32]<320)?data[40:32]:0; 
-always @(posedge clk) 
-   WRITE <= valid;
-always @(posedge clk)
-  // addr <= data[41:24]; 
+module write_mem(input clk, 
+		 input [63:0] data, 
+		 input valid, 
+		 output reg WRITE, 
+		 output reg [31:0] addr, 
+		 output reg [31:0] datain); 
+   parameter OFFSET = 0; 
+   wire [8:0] x,y; 
+   
+   assign x = (data [49:41]<320)?data[49:41]:0; 
+   assign y = (data[40:32]<320)?data[40:32]:0;
+   
+   always @(posedge clk) 
+     WRITE <= valid;
+   always @(posedge clk)
      addr <= ((x + y*320)+OFFSET) ;
-always @(posedge clk)
-   datain <= data [23:0]; 
+   always @(posedge clk)
+     datain <= data [23:0]; 
 endmodule
 
-module  read_mem(input clk,rst_n,valid_n, output reg READ,output reg [31:0] addr, input [31:0] datain, output reg [63:0] data, output reg data_valid); 
+module  read_mem(input clk,rst_n,valid_n, 
+		 output reg READ,
+		 output reg [31:0] addr, 
+		 input [31:0] datain, 
+		 output reg [63:0] data, 
+		 output reg data_valid); 
    parameter OFFSET = 0; 
    reg [31:0] index; 
    reg [8:0]  x,y; 
    reg [3:0]  state; 
    reg [3:0]  cycles; 
-always @(posedge clk,negedge rst_n)  
-  if (!rst_n) begin 
-   index<=0; 
-   state <= 0; 
-   READ <= 0; 
-   data_valid <= 0;
- end
- else
- case (state)
-   0: begin 
-      index<=0; x<=0; y<=0;           
-      if (!valid_n) state <= 1; 
-   end
-   1: begin 
-      state <= 2; 
-      READ <= 1; 
-      addr <= ( index+OFFSET);
-   end
-   2: begin 
-      READ <= 0; 
-      state <= 3; 
-   end
-   3: begin 
-      data <=  {  x,y, datain } ;
-      data_valid <= 1'b1; 
-      state <= 4; 
-   end
-   4: begin 
-      index <= index + 1; 
-      x <= (x==319) ? 0 : x+1; 
-      y <= (x==319) ? y+1 : y;  
-      data_valid <= 1'b0; 
-      if (index == 320*320-1) state <= 0; 
-      else state <= 1'b1; 
-   end
- endcase
 
+   always @(posedge clk,negedge rst_n)  
+     if (!rst_n) begin 
+	index<=0; 
+	state <= 0; 
+	READ <= 0; 
+	data_valid <= 0;
+     end
+     else
+       case (state)
+	 0: begin 
+	    index<=0; x<=0; y<=0;           
+	    if (!valid_n) state <= 1; 
+	 end
+	 1: begin 
+	    state <= 2; 
+	    READ <= 1; 
+	    addr <= ( index+OFFSET);
+	 end
+	 2: begin 
+	    READ <= 0; 
+	    state <= 3; 
+	 end
+	 3: begin 
+	    data <=  {  x,y, datain } ;
+	    data_valid <= 1'b1; 
+	    state <= 4; 
+	 end
+	 4: begin 
+	    index <= index + 1; 
+	    x <= (x==319) ? 0 : x+1; 
+	    y <= (x==319) ? y+1 : y;  
+	    data_valid <= 1'b0; 
+	    if (index == 320*320-1) state <= 0; 
+	    else state <= 1'b1; 
+	 end
+       endcase
 endmodule
 
 
 //functional modules
 
 //cmd = 0, ROTATE
-module rotate (input clk, input [63:0] data, input data_valid, output reg [63:0] data2, output reg data_valid2);
+module rotate (input clk, 
+	       input [63:0] data, 
+	       input data_valid, 
+	       output reg [63:0] data2, 
+	       output reg data_valid2);
+   
   // parameter ERROR=0;
    parameter ANGLE=10;
-   reg signed [8:0] x,y,tempx,tempy;
    wire [6:0] sin, cos;
    
    sintable sin_cos(clk, ANGLE,sin,cos); 
    
    always @(posedge clk) begin
-      /*
-      x <= data[49:41]-160;
-      y <= data[40:32]-160;
-      tempx <= (cos*x + sin*y)/64; // x2 = cos(angle)*x1 + sin(angle)*y1
-      tempy <= (-sin*x + cos*y)/64; // y2 =-sin(angle)*x1 + sin(angle)*y1
-      data2[49:41] <= tempx+160;
-      data2[40:32] <= tempy+160;
-       */
-      
       data2[49:41] <= ( cos*(data[49:41]-160) + sin*(data[40:32]-160))/64 +160;
       data2[40:32] <= (-sin*(data[49:41]-160) + cos*(data[40:32]-160))/64 +160;
-      
       end
    
    always @(posedge clk)begin
@@ -147,44 +190,20 @@ module rotate (input clk, input [63:0] data, input data_valid, output reg [63:0]
      data2[15:8] <= data[15:8];   // Green
      data2[7:0] <= data[7:0];   // blue
      data2[23:16] <= data[23:16];  //   Red
-      data2[63:50] <=0;
-      data2[31:24] <=0;
-      
+     data2[63:50] <=0;
+     data2[31:24] <=0; 
      end
- 
 endmodule // rotate
 
       
 
 
-//cmd=2 grayscale
-module grayscale (input clk, input [63:0] data, input data_valid, output reg [63:0] data2, output reg data_valid2); parameter ERROR=0; // { x,y, datain }
-   reg [8:0] tmp;
-   
- always @(posedge clk) begin
-  data2[63:42] <= 0;    // UNUSED
-  data2[49:32] <= data[49:32];   // X,Y value
-    tmp[8:0] <= (data[23:16]+ data[15:8] + data[7:0])/3;
-    
-  if (ERROR==1)
-    begin
-    data2[15:8] <= tmp[7:0];   // Green
-    data2[7:0] <= tmp[7:0];   // blue
-    data2[23:16] <= tmp[7:0];  //   Red
-    end
-  else
-    data2[15:8] <=  data[15:8];  // Green
-
-  
-  data2[31:24] <= 0;
-end
-always @(posedge clk)
-  data_valid2 <= data_valid; 
-
-endmodule // grayscale
-
-//cmd=3 zoom
-module zoom (input clk, input [63:0] data, input data_valid, output reg [63:0] data2, output reg data_valid2);
+//cmd=1 ZOOM
+module zoom (input clk, 
+	     input [63:0] data, 
+	     input data_valid, 
+	     output reg [63:0] data2, 
+	     output reg data_valid2);
   // parameter ERROR=0;
    parameter ZOOM=10;
          
@@ -198,18 +217,72 @@ module zoom (input clk, input [63:0] data, input data_valid, output reg [63:0] d
      data2[15:8] <= data[15:8];   // Green
      data2[7:0] <= data[7:0];   // blue
      data2[23:16] <= data[23:16];  //   Red
-      data2[63:50] <=0;
-      data2[31:24] <=0;
-      
+     data2[63:50] <=0;
+     data2[31:24] <=0; 
      end
- 
 endmodule // rotate
 
 
+//cmd=2 GRAYSCALE
+module grayscale (input clk, 
+		  input [63:0] data, 
+		  input data_valid, 
+		  output reg [63:0] data2, 
+		  output reg data_valid2); 
+   
+   reg [8:0] tmp;
+   
+   always @(posedge clk) begin
+      data2[63:42] <= 0;    // UNUSED
+      data2[49:32] <= data[49:32];   // X,Y value
+      tmp[8:0] <= (data[23:16]+ data[15:8] + data[7:0])/3;
+      data2[31:24] <= 0;  //UNUSED
+      data2[15:8] <= tmp[7:0];   // Green
+      data2[7:0] <= tmp[7:0];   // blue
+      data2[23:16] <= tmp[7:0];  //   Red
+   end     
+   
+   always @(posedge clk)
+     data_valid2 <= data_valid; 
+endmodule // grayscale
 
 
-module sintable(input clk,input [6:0] angle, output reg [6:0]sin,cos);
-always@(posedge clk) begin
+
+//cmd=3 INVERSION
+module inversion (input clk, 
+		  input [63:0] data, 
+		  input data_valid, 
+		  output reg [63:0] data2, 
+		  output reg data_valid2); 
+   
+   //parameter ERROR=0; // { x,y, datain }
+      
+   always @(posedge clk) begin
+      data2[63:42] <= 0;    // UNUSED
+      data2[49:32] <= data[49:32];   // X,Y value
+      data2[31:24] <= 0;  //UNUSED
+      data2[15:8]  <= 255-data[15:8];   // Green
+      data2[7:0]   <= 255-data[7:0];   // blue
+      data2[23:16] <= 255-data[23:16];  //   Red
+      end
+   always @(posedge clk)
+     data_valid2 <= data_valid; 
+endmodule // grayscale
+
+
+
+
+
+
+
+
+
+
+module sintable(input clk,
+		input [6:0] angle, 
+		output reg [6:0]sin,cos);
+   always@(posedge clk) begin
+      
 case(angle)
 0:begin
  sin<=0;

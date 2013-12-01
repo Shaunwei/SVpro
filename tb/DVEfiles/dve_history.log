@@ -70,3 +70,149 @@ gui_state_default_create -off
 gui_set_pref_value -category {Globals} -key {smart_resize} -value {false}
 gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
 gui_sim_run Ucli -exe ./simv -args {-ucligui  +UVM_TESTNAME=test_rotate} -dir .
+gui_list_expand -id  Hier.1   imageproc_test_top
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut -current_item_type Scope  -selected  { imageproc_test_top.dut   }
+gui_use_schematics 
+gui_sch_show -name imageproc_test_top.dut
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-3503 -69444} {128737 4392} }
+gui_zoom -window Schematic.1 -rect { {-3503 -69444} {128737 4392} }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { imageproc_test_top.dut } -insertionbar
+gui_sim_continue  
+gui_marker_move -id  Wave.1 C1 819218538
+gui_zoom -window Wave.1 -full
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top -current_item_type Scope  -selected  { imageproc_test_top   }
+gui_use_schematics 
+gui_sch_show -name imageproc_test_top
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-10699 -37445} {63927 4221} }
+gui_zoom -window Schematic.2 -rect { {-10699 -37445} {63927 4221} }
+gui_zoom -window Schematic.2 -rect { {-10699 -37445} {63927 4221} }
+gui_set_env SIMSETUP::SIMCURRENTDIR /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-3503 -69444} {128737 4392} }
+gui_zoom -window Schematic.1 -rect { {-3503 -69444} {128737 4392} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-3501 -69444} {128642 4338} }
+gui_zoom -window Schematic.2 -rect { {-10699 -37445} {63927 4221} }
+gui_zoom -window Schematic.2 -rect { {-10699 -37445} {63927 4221} }
+gui_zoom -window Schematic.2 -rect { {-10690 -37445} {63882 4192} }
+gui_schematic_select -id Schematic.2 -type {cell} -parent {imageproc_test_top} {imageproc_test_top.dut}
+gui_sch_viewport_backup -id Schematic.2 -type save
+gui_sch_show -window Schematic.2 -name imageproc_test_top.dut
+gui_zoom -window Schematic.2 -rect { {-3503 -69444} {128737 4392} }
+gui_zoom -window Schematic.2 -rect { {-3503 -69444} {128737 4392} }
+gui_sch_viewport_backup -id Schematic.2 -type restore -action in -pins {} -slct_targets global
+gui_schematic_clear_selection -id Schematic.2
+gui_schematic_select -id Schematic.2 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.zoom_orig}
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-3503 -69444} {128737 4392} }
+gui_zoom -window Schematic.1 -rect { {-3503 -69444} {128737 4392} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-3499 -69444} {128547 4284} }
+gui_zoom -window Schematic.2 -rect { {-3503 -69444} {128737 4392} }
+gui_zoom -window Schematic.2 -rect { {-3503 -69444} {128737 4392} }
+gui_zoom -window Schematic.2 -rect { {-3501 -69444} {128642 4338} }
+gui_schematic_clear_selection -id Schematic.2
+gui_schematic_select -id Schematic.2 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.rotate_orig}
+gui_sch_viewport_backup -id Schematic.2 -type save
+gui_sch_show -window Schematic.2 -name imageproc_test_top.dut.rotate_orig
+gui_zoom -window Schematic.2 -rect { {-3642 -35903} {68201 4210} }
+gui_zoom -window Schematic.2 -rect { {-3642 -35903} {68201 4210} }
+gui_sch_viewport_backup -id Schematic.2 -type restore -action in -pins {} -slct_targets global
+gui_schematic_clear_selection -id Schematic.2
+gui_schematic_select -id Schematic.2 -type {cell} -parent {imageproc_test_top.dut.rotate_orig} {imageproc_test_top.dut.rotate_orig.sin_cos}
+package require snpsMisc ; Misc::exec_method -method popCmd 
+::Schematic::pop_netlists Schematic.2
+gui_zoom -window Schematic.2 -rect { {-3501 -69444} {128644 4339} }
+gui_list_expand -id  Hier.1   imageproc_test_top
+gui_list_expand -id  Hier.1   imageproc_test_top.dut
+gui_list_collapse -id  Hier.1   imageproc_test_top.dut
+gui_list_expand -id  Hier.1   imageproc_test_top.dut
+gui_list_collapse -id  Hier.1   imageproc_test_top.dut
+gui_schematic_select -id Schematic.2 -type {pin} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.cmd}
+gui_open_window Wave
+gui_list_add -id Wave.2 -from Schematic.2 imageproc_test_top.dut.cmd -insertionbar
+gui_list_expand -id  Wave.2   {imageproc_test_top.dut.cmd[3:0]}
+gui_list_select -id Wave.2 -selected  { {imageproc_test_top.dut.cmd[3]}   }
+gui_list_select -id Wave.2 -selected  { {imageproc_test_top.dut.cmd[2]}   }
+gui_list_select -id Wave.2 -selected  { {imageproc_test_top.dut.cmd[1]}   }
+gui_list_collapse -id  Wave.2   Group1
+gui_list_expand -id  Wave.2   Group1
+gui_list_collapse -id  Wave.2   Group1
+gui_close_window -window  Wave.2
+gui_open_source -active imageproc_test_top.dut.cmd -activate
+package require snpsMisc; ::Misc::exec_method -method moveUpCmd 
+gui_src_show_source -id Source.1 -scope parent
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-1076 -91260} {181693 10788} }
+gui_zoom -window Schematic.1 -rect { {-1076 -91260} {181693 10788} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.2 -rect { {-11257 -4072} {21280 14095} }
+gui_zoom -window Schematic.1 -rect { {-3497 -69504} {128452 4170} }
+gui_zoom -window Schematic.2 -rect { {-1076 -91260} {181693 10788} }
+gui_zoom -window Schematic.2 -rect { {-1076 -91260} {181693 10788} }
+gui_zoom -window Schematic.2 -rect { {-3499 -69492} {128550 4237} }
+gui_zoom -window Schematic.1 -rect { {-2230 -69504} {129719 4170} }
+gui_zoom -window Schematic.1 -rect { {-3497 -69504} {128452 4170} }
+gui_zoom -window Schematic.1 -rect { {-3497 -69504} {128452 4170} }
+gui_zoom -window Schematic.1 -rect { {27980 -69504} {159929 4170} }
+gui_zoom -window Schematic.1 -rect { {27980 -84803} {159929 -11130} }
+gui_zoom -window Schematic.1 -rect { {49516 -84803} {181465 -11130} }
+gui_schematic_clear_selection -id Schematic.1
+gui_zoom -window Schematic.1 -rect { {49516 -69406} {181465 4267} }
+gui_zoom -window Schematic.1 -rect { {49516 -84803} {181465 -11130} }
+gui_zoom -window Schematic.1 -rect { {35678 -84803} {167627 -11130} }
+gui_zoom -window Schematic.1 -rect { {11998 -84803} {143947 -5381} }
+gui_zoom -window Schematic.1 -rect { {37530 -84803} {169479 -5381} }
+gui_zoom -window Schematic.1 -rect { {30611 -84803} {162560 -5381} }
+gui_zoom -window Schematic.1 -rect { {-963 -84803} {130986 -5381} }
+gui_schematic_select -id Schematic.1 -type {pin} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.cmd_data}
+gui_open_source -active imageproc_test_top.dut.cmd_data -activate
+package require snpsMisc; ::Misc::exec_method -method moveUpCmd 
+gui_src_show_source -id Source.1 -scope parent
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-10081 -4067} {20080 14088} }
+gui_zoom -window Schematic.1 -rect { {-10081 -4067} {20080 14088} }
+gui_zoom -window Schematic.2 -rect { {-10081 -4067} {20080 14088} }
+gui_zoom -window Schematic.2 -rect { {-10081 -4067} {20080 14088} }
+gui_zoom -window Schematic.1 -rect { {-10081 -4067} {20080 14088} }
+gui_zoom -window Schematic.2 -rect { {-10081 -4067} {20080 14088} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-1076 -95175} {181693 14838} }
+gui_zoom -window Schematic.1 -rect { {-1076 -95175} {181693 14838} }
+gui_zoom -window Schematic.2 -rect { {-10081 -4067} {20080 14088} }
+gui_zoom -window Schematic.2 -rect { {-10081 -4067} {20080 14088} }
+gui_zoom -window Schematic.1 -rect { {-963 -84803} {130889 -5439} }
+gui_zoom -window Schematic.2 -rect { {-1076 -95175} {181693 14838} }
+gui_zoom -window Schematic.2 -rect { {-1076 -95175} {181693 14838} }
+gui_zoom -window Schematic.2 -rect { {-963 -69503} {130990 9922} }
