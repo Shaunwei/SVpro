@@ -3,7 +3,7 @@ Command: vcs -full64 -debug_all -sverilog -ntb_opts uvm-1.1 -timescale=1ns/100ps
 ../rtl/imageproc_test_top.sv ../rtl/ram.v ./test.sv +define+UVM_NO_DEPRECATED+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR \
 image.c
                          Chronologic VCS (TM)
-        Version H-2013.06-3_Full64 -- Mon Nov 25 15:11:48 2013
+        Version H-2013.06-3_Full64 -- Sat Nov 30 16:26:46 2013
                Copyright (c) 1991-2013 by Synopsys Inc.
                          ALL RIGHTS RESERVED
 
@@ -288,13 +288,13 @@ Back to file '/projects/dft2005fall/bgreene/vcs/etc/uvm-1.1/vcs/uvm_custom_insta
 Parsing design file '../rtl/imageproc.sv'
 
 Warning-[IPDASP] Identifier in ANSI port declaration
-../rtl/imageproc.sv, 27
+../rtl/imageproc.sv, 26
   Redeclaration of ANSI ports not allowed for 'refresh', this will be an error
   in a future release
 
 
 Warning-[IPDASP] Identifier in ANSI port declaration
-../rtl/imageproc.sv, 28
+../rtl/imageproc.sv, 27
   Redeclaration of ANSI ports not allowed for 'busy', this will be an error in
   a future release
 
@@ -324,13 +324,13 @@ Back to file 'test_collection.sv'.
 Back to file './test.sv'.
 Top Level Modules:
        uvm_custom_install_recording
-       rotate
+       grayscale
        imageproc_test_top
        test
 TimeScale is 1 ns / 100 ps
 
 Warning-[PCWM-W] Port connection width mismatch
-../rtl/imageproc.sv, 125
+../rtl/imageproc.sv, 127
 "sintable sin_cos(clk, ANGLE, sin, cos);"
   The following 32-bit expression is connected to 7-bit port "angle" of module
   "sintable", instance "sin_cos".
@@ -338,23 +338,22 @@ Warning-[PCWM-W] Port connection width mismatch
   	use +lint=PCWM for more details
 
 Starting vcs inline pass...
-8 modules and 0 UDP read.
-	However, due to incremental compilation, only 2 modules need to be compiled.
-recompiling module rotate because:
-	This module or some inlined child module(s) has/have been modified.
+9 modules and 0 UDP read.
+	However, due to incremental compilation, only 1 module needs to be compiled.
 recompiling module imageproc_test_top because:
-	This module or some inlined child module(s) has/have been modified.
-Both modules done.
+	Module parameters have been changed via defparam.
 ld -r -o pre_vcsobj_1_1.o --whole-archive pre_vcsobj_1_1.a --no-whole-archive
 ld -r -o pre_vcsobj_1_2.o --whole-archive pre_vcsobj_1_2.a --no-whole-archive
+ld -r -o pre_vcsobj_1_3.o --whole-archive pre_vcsobj_1_3.a --no-whole-archive
+ld -r -o pre_vcsobj_1_4.o --whole-archive pre_vcsobj_1_4.a --no-whole-archive
 if [ -x ../simv ]; then chmod -x ../simv; fi
 g++  -o ../simv     -Wl,-whole-archive    -Wl,-no-whole-archive  image.o uvm_dpi.o \
-_vcsobj_1_1.o  5NrI_d.o 5NrIB_d.o SIM_l.o   pre_vcsobj_1_1.o pre_vcsobj_1_2.o  rmapats_mop.o \
-rmapats.o       /projects/dft2005fall/bgreene/vcs/amd64/lib/libzerosoft_rt_stubs.so \
+_vcsobj_1_1.o  5NrI_d.o 5NrIB_d.o SIM_l.o   pre_vcsobj_1_1.o pre_vcsobj_1_2.o pre_vcsobj_1_3.o \
+pre_vcsobj_1_4.o  rmapats_mop.o rmapats.o       /projects/dft2005fall/bgreene/vcs/amd64/lib/libzerosoft_rt_stubs.so \
 /projects/dft2005fall/bgreene/vcs/amd64/lib/libvirsim.so /projects/dft2005fall/bgreene/vcs/amd64/lib/liberrorinf.so \
 /projects/dft2005fall/bgreene/vcs/amd64/lib/libsnpsmalloc.so     /projects/dft2005fall/bgreene/vcs/amd64/lib/libvcsnew.so \
 /projects/dft2005fall/bgreene/vcs/amd64/lib/libvcsucli.so /projects/dft2005fall/bgreene/vcs/amd64/lib/libuclinative.so \
 ./../simv.daidir/vc_hdrs.o   /projects/dft2005fall/bgreene/vcs/amd64/lib/vcs_save_restore_new.o \
 -ldl -lm  -lc -lpthread -ldl 
 ../simv up to date
-CPU time: 6.061 seconds to compile + .004 seconds to elab + .365 seconds to link
+CPU time: 6.076 seconds to compile + .005 seconds to elab + .386 seconds to link

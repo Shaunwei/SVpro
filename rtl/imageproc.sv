@@ -23,15 +23,16 @@ ram ram(clk,WRITE0,WRITE1,READ0,READ1,addr_wr0,addr_wr1,addr_rd0,addr_rd1,datain
 reg data_valid,data_valid2,data_valid3,data_valid4;
 reg [63:0] data,data2,data3,data4;
 reg [4:0] state;
-
 reg refresh;
 reg busy=0; 
 
-//initial refresh=0; 
+//initial refresh=0;
 
+   
 always @(*) begin
  refresh = (addr_wr1==102399) ; 
 
+   
 end
 
 
@@ -43,11 +44,11 @@ end
 
 
 read_mem read_orig(clk,rst_n,!cmd_valid,READ0,addr_rd0,dataout0,data,data_valid); 
-compute_xy  #(1) compute_xy   (clk,data,data_valid, data2,data_valid2); 
-//rotate #(10) rotate_orig (clk,data,data_valid, data2,data_valid2);
-//write_mem #(102400) write_orig  (clk,data2,data_valid2,WRITE1,addr_wr1, datain1);
-//read_mem #(102400) read_orig1 (clk,rst_n,!cmd_valid,READ0,addr_rd0,dataout0,data,data_valid);
-write_mem write_orig1  (clk,data2,data_valid2,WRITE1,addr_wr1, datain1); 
+//grayscale  #(1) grayscale_orig   (clk,data,data_valid, data2,data_valid2); 
+rotate #(30) rotate_orig (clk,data,data_valid, data2,data_valid2);
+write_mem #(131072) write_tmp  (clk,data2,data_valid2,WRITE0,addr_wr0, datain0);
+read_mem #(131072) read_tmp (clk,rst_n,(addr_wr0!=233471),READ1,addr_rd1,dataout1,data3,data_valid3);//233471 = 131072 + 102399
+write_mem write_orig  (clk,data3,data_valid3,WRITE1,addr_wr1, datain1); 
 
 endmodule
 
@@ -63,7 +64,7 @@ always @(posedge clk)
    WRITE <= valid;
 always @(posedge clk)
   // addr <= data[41:24]; 
-     addr <= OFFSET | (x + y*320) ;
+     addr <= ((x + y*320)+OFFSET) ;
 always @(posedge clk)
    datain <= data [23:0]; 
 endmodule
@@ -84,13 +85,13 @@ always @(posedge clk,negedge rst_n)
  else
  case (state)
    0: begin 
-      index<=0; x<=0; y<=0; index<=0; 
+      index<=0; x<=0; y<=0;           
       if (!valid_n) state <= 1; 
    end
    1: begin 
       state <= 2; 
       READ <= 1; 
-      addr <= OFFSET | index; 
+      addr <= ( index+OFFSET);
    end
    2: begin 
       READ <= 0; 
@@ -120,32 +121,54 @@ endmodule
 module rotate (input clk, input [63:0] data, input data_valid, output reg [63:0] data2, output reg data_valid2);
   // parameter ERROR=0;
    parameter ANGLE=10;
+   reg signed [12:0] x,y,tempx,tempy;
    wire [6:0] sin, cos;
    
    sintable sin_cos(clk, ANGLE,sin,cos); 
+   
    always @(posedge clk) begin
-      data2[49:41] <= cos*data[49:41] + sin*data[40:32]; // x2 = cos(angle)*x1 + sin(angle)*y1
-      data2[40:32] <=-sin*data[49:41] + cos*data[40:32]; // y2 =-sin(angle)*x1 + sin(angle)*y1
+      x <= data[49:41] -160;
+      y <= data[40:32] -160;
+      tempx <= (cos*x + sin*y)/64;
+      tempy <= (-sin*x + cos*y)/64;
+      data2[49:41] <= tempx+160; // x2 = cos(angle)*x1 + sin(angle)*y1
+      data2[40:32] <= tempy+160; // y2 =-sin(angle)*x1 + sin(angle)*y1
    end
-   always @(posedge clk)
+   
+   always @(posedge clk)begin
      data_valid2 <= data_valid;
+     data2[15:8] <= data[15:8];   // Green
+     data2[7:0] <= data[7:0];   // blue
+     data2[23:16] <= data[23:16];  //   Red
+      data2[63:50] <=0;
+      data2[31:24] <=0;
+      
+     end
+ 
 endmodule // rotate
 
       
 
 
 
-module compute_xy (input clk, input [63:0] data, input data_valid, output reg [63:0] data2, output reg data_valid2); parameter ERROR=0; // { x,y, datain }
+module grayscale (input clk, input [63:0] data, input data_valid, output reg [63:0] data2, output reg data_valid2); parameter ERROR=0; // { x,y, datain }
+   reg [8:0] tmp;
+   
  always @(posedge clk) begin
   data2[63:42] <= 0;    // UNUSED
   data2[49:32] <= data[49:32];   // X,Y value
-  data2[7:0] <= data[7:0]*0.07;   // blue
-  if (ERROR==1) 
-    data2[15:8] <= data[15:8]*0.7;   // Green
+    tmp[8:0] <= (data[23:16]+ data[15:8] + data[7:0])/3;
+    
+  if (ERROR==1)
+    begin
+    data2[15:8] <= tmp[7:0];   // Green
+    data2[7:0] <= tmp[7:0];   // blue
+    data2[23:16] <= tmp[7:0];  //   Red
+    end
   else
     data2[15:8] <=  data[15:8];  // Green
 
-  data2[23:16] <= data[23:16]*0.2;  //   Red
+  
   data2[31:24] <= 0;
 end
 always @(posedge clk)
@@ -199,8 +222,8 @@ case(angle)
  cos<=63;
  end
 10:begin
- sin<=3;
- cos<=16;
+ sin<=11;
+ cos<=63;
  end
 11:begin
  sin<=12;

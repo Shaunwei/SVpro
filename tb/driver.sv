@@ -102,7 +102,7 @@ class driver extends uvm_driver #(packet);
      fork 
         wait (sigs.drvClk.refresh == 1); 
         begin
-          repeat (500000) @(sigs.drvClk); 
+          repeat (5000000) @(sigs.drvClk); 
           `uvm_fatal("DRV_RUN", $sformatf("Did not received a refresh signal within 500000 cycles!!")); 
         end
      join_any
