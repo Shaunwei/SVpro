@@ -45,9 +45,10 @@ end
 
 read_mem read_orig(clk,rst_n,!cmd_valid,READ0,addr_rd0,dataout0,data,data_valid); 
 //grayscale  #(1) grayscale_orig   (clk,data,data_valid, data2,data_valid2); 
-rotate #(30) rotate_orig (clk,data,data_valid, data2,data_valid2);
+rotate #(45) rotate_orig (clk,data,data_valid, data2,data_valid2);
+//zoom #(2) zoom_orig (clk,data,data_valid, data2,data_valid2);
 write_mem #(131072) write_tmp  (clk,data2,data_valid2,WRITE0,addr_wr0, datain0);
-read_mem #(131072) read_tmp (clk,rst_n,(addr_wr0!=233471),READ1,addr_rd1,dataout1,data3,data_valid3);//233471 = 131072 + 102399
+read_mem #(131072) read_tmp (clk,rst_n,(addr_rd0!=102399),READ1,addr_rd1,dataout1,data3,data_valid3);
 write_mem write_orig  (clk,data3,data_valid3,WRITE1,addr_wr1, datain1); 
 
 endmodule
@@ -58,8 +59,8 @@ endmodule
 module write_mem(input clk, input [63:0] data, input valid, output reg WRITE, output reg [31:0] addr, output reg [31:0] datain); 
 parameter OFFSET = 0; 
 wire [8:0] x,y; 
-assign x = data [49:41]; 
-assign y = data[40:32]; 
+assign x = (data [49:41]<320)?data[49:41]:0; 
+assign y = (data[40:32]<320)?data[40:32]:0; 
 always @(posedge clk) 
    WRITE <= valid;
 always @(posedge clk)
@@ -121,19 +122,25 @@ endmodule
 module rotate (input clk, input [63:0] data, input data_valid, output reg [63:0] data2, output reg data_valid2);
   // parameter ERROR=0;
    parameter ANGLE=10;
-   reg signed [12:0] x,y,tempx,tempy;
+   reg signed [8:0] x,y,tempx,tempy;
    wire [6:0] sin, cos;
    
    sintable sin_cos(clk, ANGLE,sin,cos); 
    
    always @(posedge clk) begin
-      x <= data[49:41] -160;
-      y <= data[40:32] -160;
-      tempx <= (cos*x + sin*y)/64;
-      tempy <= (-sin*x + cos*y)/64;
-      data2[49:41] <= tempx+160; // x2 = cos(angle)*x1 + sin(angle)*y1
-      data2[40:32] <= tempy+160; // y2 =-sin(angle)*x1 + sin(angle)*y1
-   end
+      /*
+      x <= data[49:41]-160;
+      y <= data[40:32]-160;
+      tempx <= (cos*x + sin*y)/64; // x2 = cos(angle)*x1 + sin(angle)*y1
+      tempy <= (-sin*x + cos*y)/64; // y2 =-sin(angle)*x1 + sin(angle)*y1
+      data2[49:41] <= tempx+160;
+      data2[40:32] <= tempy+160;
+       */
+      
+      data2[49:41] <= ( cos*(data[49:41]-160) + sin*(data[40:32]-160))/64 +160;
+      data2[40:32] <= (-sin*(data[49:41]-160) + cos*(data[40:32]-160))/64 +160;
+      
+      end
    
    always @(posedge clk)begin
      data_valid2 <= data_valid;
@@ -150,7 +157,7 @@ endmodule // rotate
       
 
 
-
+//cmd=2 grayscale
 module grayscale (input clk, input [63:0] data, input data_valid, output reg [63:0] data2, output reg data_valid2); parameter ERROR=0; // { x,y, datain }
    reg [8:0] tmp;
    
@@ -174,7 +181,30 @@ end
 always @(posedge clk)
   data_valid2 <= data_valid; 
 
-endmodule // compute_xy
+endmodule // grayscale
+
+//cmd=3 zoom
+module zoom (input clk, input [63:0] data, input data_valid, output reg [63:0] data2, output reg data_valid2);
+  // parameter ERROR=0;
+   parameter ZOOM=10;
+         
+   always @(posedge clk) begin
+      data2[49:41] <= (data[49:41]-160)/ZOOM+160;
+      data2[40:32] <= (data[40:32]-160)/ZOOM+160;
+      end
+   
+   always @(posedge clk)begin
+     data_valid2 <= data_valid;
+     data2[15:8] <= data[15:8];   // Green
+     data2[7:0] <= data[7:0];   // blue
+     data2[23:16] <= data[23:16];  //   Red
+      data2[63:50] <=0;
+      data2[31:24] <=0;
+      
+     end
+ 
+endmodule // rotate
+
 
 
 

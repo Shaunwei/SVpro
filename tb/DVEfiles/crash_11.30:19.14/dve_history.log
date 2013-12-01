@@ -1,0 +1,1124 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_create_pref_category -category {schem_obj_name}
+gui_create_pref_key -category {schem_obj_name} -key {show_cell_and_pin_with_symbol_name} -value_type {bool} -value {false}
+gui_create_pref_key -category {schem_pin_hc} -key {textExtFont} -value_type {string} -value {Helvetica,10,-1,5,50,0,0,0,0,0}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key open_wave_inside -value true
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/DVEfiles//crash_11.27:18.13/dve_session11.27:18.13.tcl} {gui_load_session -ignore_errors -file /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/DVEfiles//crash_11.19:21.56/dve_session11.19:21.56.tcl}}
+gui_set_state_value -category Layout -key child_console_size_x -value 1909
+gui_set_state_value -category Layout -key child_console_size_y -value 177
+gui_set_state_value -category Layout -key child_data_coltype -value 56
+gui_set_state_value -category Layout -key child_data_colvalue -value 66
+gui_set_state_value -category Layout -key child_data_colvariable -value 155
+gui_set_state_value -category Layout -key child_data_size_x -value 272
+gui_set_state_value -category Layout -key child_data_size_y -value 687
+gui_set_state_value -category Layout -key child_driver_size_x -value 1647
+gui_set_state_value -category Layout -key child_driver_size_y -value 184
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colhier -value 230
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_coltype -value 39
+gui_set_state_value -category Layout -key child_hier_size_x -value 264
+gui_set_state_value -category Layout -key child_hier_size_y -value 687
+gui_set_state_value -category Layout -key child_hier_sort_order -value 1
+gui_set_state_value -category Layout -key child_schematic_docknewline -value false
+gui_set_state_value -category Layout -key child_schematic_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_schematic_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_schematic_size_x -value 1376
+gui_set_state_value -category Layout -key child_schematic_size_y -value 682
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 1376
+gui_set_state_value -category Layout -key child_source_size_y -value 682
+gui_set_state_value -category Layout -key child_wave_colname -value 196
+gui_set_state_value -category Layout -key child_wave_colvalue -value 200
+gui_set_state_value -category Layout -key child_wave_left -value 400
+gui_set_state_value -category Layout -key child_wave_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_wave_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_wave_right -value 966
+gui_set_state_value -category Layout -key child_wave_size_x -value 1376
+gui_set_state_value -category Layout -key child_wave_size_y -value 682
+gui_set_state_value -category Layout -key main_pos_y -value 98
+gui_set_state_value -category Layout -key main_size_x -value 1914
+gui_set_state_value -category Layout -key main_size_y -value 1061
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1440
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 785
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 273
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 173
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1708
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 1062
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_VPDCombo} -value_type string -value inter.vpd
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_argsCombo} -value_type string -value {{-ucligui +UVM_TESTNAME=test_rotate} +UVM_TESTNAME=test_rotate {-ucligui }}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_curDirCombo} -value_type string -value {/DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb /DCNFS/users/student/xwei/Desktop/ELEN603/final/test /DCNFS/users/student/xwei/Desktop/verilog/syn_fifo}
+gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab pages|SimTab|m_exeCombo} -value_type string -value {/DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv ./simv /DCNFS/users/student/xwei/Desktop/ELEN603/final/test/simv /DCNFS/users/student/xwei/Desktop/verilog/syn_fifo/simv}
+gui_state_default_create -off
+
+# Begin command logging
+gui_set_pref_value -category {Globals} -key {smart_resize} -value {false}
+gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
+gui_sim_run Ucli -exe ./simv -args {-ucligui  +UVM_TESTNAME=test_rotate} -dir .
+gui_list_expand -id  Hier.1   imageproc_test_top
+gui_list_expand -id  Hier.1   imageproc_test_top.dut
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut -current_item_type Scope  -selected  { imageproc_test_top.dut   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { imageproc_test_top.dut } -insertionbar
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut.write_tmp -current_item_type Scope  -selected  { imageproc_test_top.dut.write_tmp   }
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut -current_item_type Scope  -selected  { imageproc_test_top.dut   }
+gui_use_schematics 
+gui_sch_show -name imageproc_test_top.dut
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-953 -55379} {126233 4595} }
+gui_zoom -window Schematic.1 -rect { {-953 -55379} {126233 4595} }
+gui_zoom -window Schematic.1 -rect { {-953 -55379} {126233 4595} }
+gui_sim_continue  
+gui_marker_move -id  Wave.1 C1 409626561
+gui_zoom -window Wave.1 -full
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.write_tmp}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.read_tmp}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.write_orig}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.read_tmp}
+gui_open_source -active imageproc_test_top.dut.read_tmp -activate
+gui_toggle_source_value_annotate Source.1
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_env SIMSETUP::SIMCURRENTDIR /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-953 -55379} {126233 4595} }
+gui_zoom -window Schematic.1 -rect { {-953 -55379} {126233 4595} }
+gui_zoom -window Schematic.1 -rect { {-953 -55379} {126140 4551} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-953 -55379} {126233 4595} }
+gui_zoom -window Schematic.1 -rect { {-953 -55379} {126233 4595} }
+gui_zoom -window Schematic.1 -rect { {-953 -55378} {126047 4508} }
+gui_sim_continue  
+gui_marker_move -id  Wave.1 C1 855154795
+gui_zoom -window Wave.1 -full
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-952 -55373} {125956 4470} }
+gui_sim_continue  
+gui_marker_move -id  Wave.1 C1 945522907
+gui_zoom -window Wave.1 -full
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.addr_wr0[31:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-952 -55374} {125863 4425} }
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut.write_tmp -current_item_type Scope  -selected  {  }
+gui_sim_continue  
+gui_zoom -window Schematic.1 -rect { {14513 -55374} {141328 4425} }
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.rotate_orig}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.read_orig}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.write_tmp}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.rotate_orig}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.rotate_orig}
+gui_schematic_clear_selection -id Schematic.1
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.rotate_orig}
+gui_list_collapse -id  Wave.1   dut
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut.rotate_orig -current_item_type Scope  -selected  { imageproc_test_top.dut.rotate_orig   }
+gui_sg_create rotate_orig
+gui_list_add_group -id  Wave.1   {rotate_orig} 
+gui_list_add  -id  Wave.1   -after rotate_orig {{imageproc_test_top.dut.rotate_orig}}
+gui_list_select -id Wave.1 -selected  { rotate_orig   }
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 62285284
+gui_wv_zoom_timerange -id  Wave.1 0 6840200
+gui_wv_zoom_timerange -id  Wave.1 0 2080230
+gui_wv_zoom_timerange -id  Wave.1 0 456904
+gui_wv_zoom_timerange -id  Wave.1 21711 165007
+gui_wv_zoom_timerange -id  Wave.1 22243 76868
+gui_wv_zoom_timerange -id  Wave.1 22265 40781
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.rotate_orig.cos[6:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 39793376
+gui_wv_zoom_timerange -id  Wave.1 0 4538210
+gui_wv_zoom_timerange -id  Wave.1 0 522349
+gui_wv_zoom_timerange -id  Wave.1 25373 113626
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 44732 408550
+gui_wv_zoom_timerange -id  Wave.1 71457 136768
+gui_wv_zoom_timerange -id  Wave.1 81587 93587
+gui_wv_zoom_timerange -id  Wave.1 83886 85178
+gui_marker_move -id  Wave.1 C1 84258
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {14502 -55376} {141224 4379} }
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut.rotate_orig -current_item_type Scope  -selected  {  }
+gui_sim_continue  
+gui_marker_move -id  Wave.1 C1 819224195
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 0 162633797
+gui_wv_zoom_timerange -id  Wave.1 0 11162827
+gui_wv_zoom_timerange -id  Wave.1 0 978368
+gui_wv_zoom_timerange -id  Wave.1 8265 193194
+gui_wv_zoom_timerange -id  Wave.1 40032 69715
+gui_wv_zoom_timerange -id  Wave.1 44822 50370
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_zoom_timerange -id  Wave.1 388723 408033
+gui_marker_move -id  Wave.1 C1 392643
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {14491 -55377} {141120 4334} }
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {14480 -55379} {141016 4289} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {14469 -55380} {140912 4244} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {14457 -55381} {140807 4198} }
+gui_sim_continue  
+gui_marker_move -id  Wave.1 C1 5000014520
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {14446 -55383} {140704 4154} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {-994 -60904} {144462 7685} }
+gui_zoom -window Schematic.1 -rect { {14435 -55384} {140601 4109} }
+gui_sim_continue  
+gui_marker_move -id  Wave.1 C1 5000016009
+gui_zoom -window Wave.1 -full
+gui_list_expand -id  Wave.1   dut
+gui_list_collapse -id  Wave.1   dut
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.rotate_orig.ANGLE[31:0]}   }
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.rotate_orig.cos[6:0]}   }
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.rotate_orig.sin[6:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_marker_move -id  Wave.1 C1 1193246231
+gui_wv_zoom_timerange -id  Wave.1 0 570223863
+gui_wv_zoom_timerange -id  Wave.1 0 47568833
+gui_wv_zoom_timerange -id  Wave.1 0 5424957
+gui_wv_zoom_timerange -id  Wave.1 0 641600
+gui_wv_zoom_timerange -id  Wave.1 19648 142954
+gui_wv_zoom_timerange -id  Wave.1 20442 49348
+gui_wv_zoom_timerange -id  Wave.1 24907 30402
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 21847
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_list_expand -id  Wave.1   dut
+gui_zoom -window Wave.1 -full
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.addr_wr0}
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.addr_wr0[31:0]}   }
+gui_marker_move -id  Wave.1 C1 168952500
+gui_marker_move -id  Wave.1 C1 353744500
+gui_marker_move -id  Wave.1 C1 409620500
+gui_marker_select -id  Wave.1 { C1 }
+gui_get_drivers -id Wave.1 -signal {imageproc_test_top.dut.addr_wr0[31:0]}
+gui_marker_move -id  Wave.1 C1 359028500
+gui_marker_move -id  Wave.1 C1 279828500
+gui_marker_move -id  Wave.1 C1 190072500
+gui_marker_move -id  Wave.1 C1 100316500
+gui_marker_move -id  Wave.1 C1 237592500
+gui_marker_move -id  Wave.1 C1 327348500
+gui_marker_move -id  Wave.1 C1 359028500
+gui_marker_move -id  Wave.1 C1 385428500
+gui_marker_move -id  Wave.1 C1 409620500
+gui_marker_move -id  Wave.1 C1 1531156668
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.read_orig}
+gui_list_collapse -id  Wave.1   rotate_orig
+gui_list_select -id Wave.1 -selected  {  }
+gui_list_collapse -id  Wave.1   dut
+gui_list_expand -id  Hier.1   imageproc_test_top
+gui_list_expand -id  Hier.1   imageproc_test_top.dut
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut.read_orig -current_item_type Scope  -selected  { imageproc_test_top.dut.read_orig   }
+gui_sg_create read_orig
+gui_list_add_group -id  Wave.1   {read_orig} 
+gui_list_add  -id  Wave.1   -after read_orig {{imageproc_test_top.dut.read_orig}}
+gui_list_select -id Wave.1 -selected  { read_orig   }
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.read_orig.addr[31:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.addr_rd0}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.addr_rd0}
+gui_schematic_clear_selection -id Schematic.1
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.read_orig}
+gui_open_source -active {imageproc_test_top.dut.read_orig.addr[31:0]} -activate
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.addr_rd0}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.read_orig}
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14375 -4086} {24403 14114} }
+gui_zoom -window Schematic.1 -rect { {-14375 -4086} {24403 14114} }
+gui_zoom -window Schematic.1 -rect { {-14375 -4086} {24403 14114} }
+gui_zoom -window Schematic.1 -rect { {-16163 -69500} {141440 4467} }
+gui_zoom -window Schematic.1 -rect { {-16163 -69500} {141440 4467} }
+gui_zoom -window Schematic.1 -rect { {14424 -55453} {140498 3717} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {14413 -55650} {140395 3757} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {14402 -55659} {140292 3703} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {14391 -55669} {140189 3650} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {14380 -55679} {140086 3597} }
+gui_zoom -window Schematic.1 -rect { {3231 -55679} {128937 3597} }
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3228 -55689} {128842 3544} }
+gui_sim_continue  
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.rotate_orig}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data2}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.rotate_orig}
+gui_open_source -active imageproc_test_top.dut.rotate_orig -activate
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3225 -55699} {128747 3490} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3223 -55709} {128654 3438} }
+gui_sim_continue  
+gui_marker_move -id  Wave.1 C1 2624085739
+gui_list_expand -id  Wave.1   dut
+gui_wv_zoom_timerange -id  Wave.1 385429092 501585805
+gui_wv_zoom_timerange -id  Wave.1 408327030 411638784
+gui_wv_zoom_timerange -id  Wave.1 409590880 409688799
+gui_wv_zoom_timerange -id  Wave.1 409614926 409621234
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 409616874
+gui_list_expand -id  Wave.1   rotate_orig
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.rotate_orig.data[63:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_list_set_selected_property -id Wave.1 -radix oct
+gui_list_set_selected_property -id Wave.1 -radix hex
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.rotate_orig.x[9:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.rotate_orig.y[9:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_list_expand -id  Wave.1   {imageproc_test_top.dut.rotate_orig.$unit}
+gui_list_collapse -id  Wave.1   {imageproc_test_top.dut.rotate_orig.$unit}
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3220 -55719} {128559 3384} }
+gui_sim_continue  
+gui_marker_move -id  Wave.1 C1 819228846
+gui_zoom -window Wave.1 -full
+gui_wv_zoom_timerange -id  Wave.1 384089772 427343125
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.rotate_orig.x[9:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 408600313 410792668
+gui_wv_zoom_timerange -id  Wave.1 409479594 409810646
+gui_wv_zoom_timerange -id  Wave.1 409589979 409649408
+gui_marker_move -id  Wave.1 C1 409617500
+gui_open_source -active {imageproc_test_top.dut.rotate_orig.x[9:0]} -activate
+gui_toggle_source_value_annotate Source.1
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_src_highlight_item -id Source.1 -lfrom 134 -idxfrom 6 -fileIdFrom 0 -lto 134 -idxto 11 -fileIdTo 0 -selection {data2} -selectionId 0 -replace 0
+gui_set_radix -radix decimal -signals { {imageproc_test_top.dut.rotate_orig.data2[63:0]} } -window Source.1
+gui_src_highlight_item -id Source.1 -lfrom 132 -idxfrom 6 -fileIdFrom 0 -lto 132 -idxto 11 -fileIdTo 0 -selection {tempx} -selectionId 0 -replace 0
+gui_set_radix -radix decimal -signals { {imageproc_test_top.dut.rotate_orig.tempx[9:0]} } -window Source.1
+gui_src_highlight_item -id Source.1 -lfrom 133 -idxfrom 6 -fileIdFrom 0 -lto 133 -idxto 11 -fileIdTo 0 -selection {tempy} -selectionId 0 -replace 0
+gui_set_radix -radix decimal -signals { {imageproc_test_top.dut.rotate_orig.tempy[9:0]} } -window Source.1
+gui_marker_move -id  Wave.1 C1 409620940
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_wv_zoom_timerange -id  Wave.1 404067226 417433318
+gui_wv_zoom_timerange -id  Wave.1 409310103 410411007
+gui_wv_zoom_timerange -id  Wave.1 409559538 409710666
+gui_wv_zoom_timerange -id  Wave.1 409614810 409630130
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_collapse -id  Wave.1   read_orig
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut.read_tmp -current_item_type Scope  -selected  { imageproc_test_top.dut.read_tmp   }
+gui_sg_create read_tmp
+gui_list_add_group -id  Wave.1   {read_tmp} 
+gui_list_add  -id  Wave.1   -after read_tmp {{imageproc_test_top.dut.read_tmp}}
+gui_list_collapse -id  Wave.1   read_tmp
+gui_list_expand -id  Wave.1   read_tmp
+gui_set_radix -radix hex -signals { {imageproc_test_top.dut.rotate_orig.tempy[9:0]} } -window Source.1
+gui_src_highlight_item -id Source.1 -lfrom 121 -idxfrom 81 -fileIdFrom 0 -lto 121 -idxto 86 -fileIdTo 0 -selection {data2} -selectionId 0 -replace 0
+gui_set_radix -radix hex -signals { {imageproc_test_top.dut.rotate_orig.data2[63:0]} } -window Source.1
+gui_zoom -window Schematic.1 -rect { {3220 -69429} {128559 -10326} }
+gui_zoom -window Schematic.1 -rect { {3220 -54792} {128559 4311} }
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.rotate_orig}
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.write_tmp}
+gui_wv_zoom_timerange -id  Wave.1 720937522 958422824
+gui_wv_zoom_timerange -id  Wave.1 804240088 835336368
+gui_wv_zoom_timerange -id  Wave.1 816942292 822360334
+gui_wv_zoom_timerange -id  Wave.1 818845222 819800674
+gui_wv_zoom_timerange -id  Wave.1 819162372 819315728
+gui_wv_zoom_timerange -id  Wave.1 819195688 819236821
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_expand -id  Wave.1   {imageproc_test_top.dut.read_tmp.data[63:0]}
+gui_list_collapse -id  Wave.1   {imageproc_test_top.dut.read_tmp.data[63:0]}
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.read_tmp.data[63:0]}   }
+gui_wv_zoom_timerange -id  Wave.1 818808390 819589507
+gui_wv_zoom_timerange -id  Wave.1 819041179 819271307
+gui_wv_zoom_timerange -id  Wave.1 819109876 819224818
+gui_wv_zoom_timerange -id  Wave.1 819171486 819214452
+gui_wv_zoom_timerange -id  Wave.1 819188259 819206180
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.read_tmp.y[8:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_marker_move -id  Wave.1 C1 818966249
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.read_tmp.x[8:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_marker_move -id  Wave.1 C1 818879500
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 6557821
+gui_wv_scroll_hslidermove -id  Wave.1 10822196
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.read_tmp.addr[31:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_list_set_selected_property -id Wave.1 -radix hex
+gui_marker_move -id  Wave.1 C1 819198096
+gui_marker_move -id  Wave.1 C1 819176372
+gui_marker_move -id  Wave.1 C1 819172739
+gui_marker_move -id  Wave.1 C1 819169030
+gui_marker_move -id  Wave.1 C1 819165397
+gui_wv_scroll_hslidermove -id  Wave.1 8803486
+gui_wv_scroll_hslidermove -id  Wave.1 5434988
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scroll_hslidermove -id  Wave.1 5446933
+gui_marker_move -id  Wave.1 C1 412294730
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 411598138
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 411426660
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 409616698 409795936
+gui_wv_zoom_timerange -id  Wave.1 409616746 409643812
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollleft -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_marker_move -id  Wave.1 C1 413008500
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut.write_orig -current_item_type Scope  -selected  { imageproc_test_top.dut.write_orig   }
+gui_sg_create write_orig
+gui_list_add_group -id  Wave.1   {write_orig} 
+gui_list_add  -id  Wave.1   -after write_orig {{imageproc_test_top.dut.write_orig}}
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.write_orig.x[8:0]}   }
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.write_orig.addr[31:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_marker_move -id  Wave.1 C1 427342500
+gui_marker_move -id  Wave.1 C1 413499500
+gui_marker_move -id  Wave.1 C1 363328163
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.write_orig.x[8:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.write_orig.y[8:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_schematic_select -id Schematic.1 -type {cell} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.write_orig}
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut.write_tmp -current_item_type Scope  -selected  { imageproc_test_top.dut.write_tmp   }
+gui_sg_create write_tmp
+gui_list_add_group -id  Wave.1   {write_tmp} 
+gui_list_add  -id  Wave.1   -after write_tmp {{imageproc_test_top.dut.write_tmp}}
+gui_marker_move -id  Wave.1 C1 1102095427
+gui_marker_move -id  Wave.1 C1 22491500
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.write_tmp.x[8:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.write_tmp.y[8:0]}   }
+gui_list_set_selected_property -id Wave.1 -radix decimal
+gui_list_select -id Wave.1 -selected  { {imageproc_test_top.dut.read_tmp.x[8:0]}   }
+gui_open_source -active {imageproc_test_top.dut.read_tmp.x[8:0]} -activate
+gui_toggle_source_value_annotate Source.1
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_marker_move -id  Wave.1 C1 475783500
+gui_toggle_source_value_annotate Source.1
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_marker_move -id  Wave.1 C1 491357500
+gui_wv_zoom_timerange -id  Wave.1 475786880 512119696
+gui_wv_zoom_timerange -id  Wave.1 490282002 492277046
+gui_wv_zoom_timerange -id  Wave.1 491185310 491431794
+gui_wv_zoom_timerange -id  Wave.1 491350107 491379779
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 491143500
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 488921367 489041684
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_wv_scrollleft -id  Wave.1  page
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_wv_zoom_timerange -id  Wave.1 471478130 497497894
+gui_wv_zoom_timerange -id  Wave.1 484456683 485775531
+gui_wv_zoom_timerange -id  Wave.1 485019930 485181479
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3217 -54803} {128464 4257} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3214 -54813} {128369 4203} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3211 -54824} {128275 4150} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3208 -54834} {128181 4096} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3206 -54844} {128088 4043} }
+gui_sim_continue  
+gui_list_select -id Hier.1 -current_item_name imageproc_test_top.dut.write_tmp -current_item_type Scope  -selected  {  }
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3203 -54855} {127993 3989} }
+gui_sim_continue  
+gui_sim_restart -build /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv.daidir/vcs_rebuild
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_zoom -window Schematic.1 -rect { {-14297 -4086} {24296 14113} }
+gui_set_pref_value -category {Source} -key {value_annotate} -value {false}
+gui_set_pref_value -category {Source} -key {value_annotate} -value {true}
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {-15858 -69499} {140996 4465} }
+gui_zoom -window Schematic.1 -rect { {3200 -54865} {127899 3936} }
+gui_schematic_clear_selection -id Schematic.1
+gui_zoom -window Schematic.1 -rect { {3200 -69427} {127899 -10626} }
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.dataout1}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data_valid3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data_valid3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data3}
+gui_schematic_clear_selection -id Schematic.1
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data_valid3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data_valid3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.addr_rd1}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data3}
+gui_schematic_select -id Schematic.1 -type {net} -parent {imageproc_test_top.dut} {imageproc_test_top.dut.data_valid3}
+gui_wv_zoom_timerange -id  Wave.1 488414705 1150115314
+gui_list_select -id Hier.1 -current_item_name uvm_custom_install_recording -current_item_type Scope  -selected  { uvm_custom_install_recording   }

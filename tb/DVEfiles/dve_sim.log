@@ -1,3 +1,30 @@
-16:27:07    2284 --> ...                                      [tcl] ucliGUI::start /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv -ucligui +UVM_TESTNAME=test_rotate
-16:27:07    2285 --> ...                                          [tcl] set ucliGUI::state
-16:27:07    2286 --> ...                                              [tcl] gui_update_simulator_buttons
+19:15:06    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./simv +UVM_TESTNAME=test_rotate -pid 12585 -toolin /tmp/vcs_20131201031457_12584_xwei..stdin -toolout /tmp/vcs_20131201031457_12584_xwei..stdout  
+19:15:06    17 -->                                                                 [tcl] set ucliGUI::state
+19:15:06    18 -->                                                                     [tcl] gui_update_simulator_buttons
+19:15:16    19 -->                                                                         [tcl] set ucliGUI::state
+19:15:16    20 -->                                                                             [tcl] ucliCore::getToolPID
+19:15:16    21 -->                                                                                 [tcl] synopsys::env hasTB
+19:15:16    22 -->                                                                                     [tcl] trigger_hier_stack_context_switch 0
+19:15:16    23 -->                                                                                         [tcl] synopsys::xml set_array_limit <data limit="50" />
+19:15:16    24 -->                                                                                             [tcl] synopsys::xml set_depth_limit <data limit="100" />
+19:15:16    25 --> ...  [tcl] synopsys::xml set_string_limit <data limit="1000" />
+19:15:16    26 --> ...      [tcl] synopsys::xml set_only_active_frame <data value="1" />
+19:15:16    27 --> ...          [tcl] synopsys::xml set_variable_frame_id <data value="1" />
+19:15:16    28 --> ...              [tcl] synUtils::setDVEInitPhase 1
+19:15:16    29 --> ...                  [tcl] gui_get_env SIMSETUP::SIMVPD
+19:15:16    30 --> ...                      [tcl] synopsys::dump -type VPD -file /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/inter.vpd -locking
+19:15:16    31 --> ...                          [tcl] synopsys::dump -autoflush on -fid VPD0
+19:15:16    32 --> ...                              [tcl] set ::dve_fid VPD0
+19:15:16    33 --> ...                                  [tcl] synUtils::setDVEInitPhase 0
+19:15:16    34 --> ...                                      [tcl] ucliCore::getToolPID
+19:15:16    35 --> ...                                          [tcl] synUtils::sendTool -active _icl_setToolSocket linux60814 45149
+19:15:16    36 --> ...                                              [tcl] synUtils::sendTool -active {_icl_start_rpc -version "H-2013.06-3_Full64" -sync_file /tmp/vcs_dve_rpc.xwei.12585}
+19:15:16    37 --> ...                                                  [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.xwei.12585}
+19:15:16    38 --> ...                                                      [tcl] dveMisc::vbusExpand uvm_pkg
+19:15:16    39 --> ...                                                          [tcl] ucliGUI::vpdAddHierarchy -scope uvm_pkg -depth 1 -file /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/inter.vpd; synopsys::dump -flush VPD0
+19:15:16    40 --> ...                                                              [tcl] config endofsim noexit
+19:15:16    41 --> ...                                                                  [tcl] config onfail enable all
+19:15:16    42 --> ...                                                                      [tcl] config syscaddplainmembers
+19:15:16    43 --> ...                                                                          [tcl] config syscaddsourcenames
+19:15:16    44 --> ...                                                                              [tcl] config syscaddstructtypes
+19:15:16    45 --> ...                                                                                  [tcl] synopsys::listing -disable

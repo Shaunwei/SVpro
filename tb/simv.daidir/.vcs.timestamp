@@ -446,10 +446,9 @@
 /projects/dft2005fall/bgreene/vcs/etc/uvm-1.1/vcs/uvm_custom_install_vcs_recorder.sv
 comp.log
 uvm-1.1
-69
+58
 sysc_uni_pwd=/DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb
 module=() {  eval `/usr/bin/modulecmd bash $*`_}
-binpath=/projects/dft2005fall/bgreene/vcs/gui/dve/amd64/bin
 XUSERFILESEARCHPATH=./%N:/usr/lib/X11/app-defaults/%N:/LINKS/X11R5/lib/X11/%N
 XDM_MANAGED=method=classic
 XDG_SESSION_COOKIE=c79d112cba209ea6f80605b600000028-1385850491.886904-603426691
@@ -460,7 +459,6 @@ XAUTHORITY=/var/run/kdm/.Xauthhn1eVz
 WINDOWPATH=7
 VMR_MODE_FLAG=64
 VCS_UVM_HOME=/projects/dft2005fall/bgreene/vcs/etc/uvm-1.1
-VCS_PATHMAP_PRELOAD_DONE=1
 VCS_MODE_FLAG=64
 VCS_LOG_FILE=comp.log
 VCS_HOME=/projects/dft2005fall/bgreene/vcs
@@ -469,11 +467,9 @@ VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH=amd64
 UNAME=/bin/uname
 TOOL_HOME=/projects/dft2005fall/bgreene/vcs/amd64
-TCLLIBPATH=/projects/dft2005fall/bgreene/vcs/gui/dve/auxx/tcllib/lib/tcl8.4 /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/tcllib/snps_tcl
 SSH_AUTH_SOCK=/tmp/ssh-tfEBQk3258/agent.3258
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SSH_AGENT_PID=3298
-SPECMAN_OUTPUT_TO_TTY=1
 SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3610,unix/unix:/tmp/.ICE-unix/3610
 SCRNAME=vcs
 SCRIPT_NAME=vcs
@@ -485,8 +481,6 @@ PROFILEHOME=/home/xwei
 OVA_UUM=0
 MODULESHOME=/usr/share/Modules
 MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
-MDB_SIM_ARGS=-simwarn
-MARCH=amd64
 LOADEDMODULES=
 LESSOPEN=|/usr/bin/lesspipe.sh %s
 LC_ALL=C
@@ -506,16 +500,11 @@ GS_LIB=
 GPG_AGENT_INFO=/tmp/gpg-kvBbkN/S.gpg-agent:3328:1
 GNOME_KEYRING_SOCKET=/tmp/keyring-VPxM2j/socket
 GNOME_KEYRING_PID=3254
-DVE_SIM_SELECT_LOOP=on
-DVE_PSTACK=/usr/bin/gstack
-DVE_AUXX_GUI=/projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui
-DVE=/projects/dft2005fall/bgreene/vcs/gui/dve
 DM_CONTROL=/var/run/xdmctl
 DESKTOP_SESSION=default
 DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-3VJ6vduFGR,guid=674b0bff7851c7c7fc936c570000004a
 CVS_RSH=ssh
 COLORFGBG=15;0
-CMD=/projects/dft2005fall/bgreene/vcs/gui/dve/amd64/bin/dve.exe
 0
 152
 1384923533 packet_zoom.sv
@@ -666,7 +655,7 @@ CMD=/projects/dft2005fall/bgreene/vcs/gui/dve/amd64/bin/dve.exe
 1384923533 ../rtl/ram.v
 1384923533 ../rtl/imageproc_test_top.sv
 1384923533 ../rtl/imageproc_io.sv
-1385857601 ../rtl/imageproc.sv
+1385868141 ../rtl/imageproc.sv
 1378787799 /projects/dft2005fall/bgreene/vcs/etc/uvm-1.1/vcs/uvm_custom_install_vcs_recorder.sv
 1378787799 /projects/dft2005fall/bgreene/vcs/etc/uvm-1.1/uvm_pkg.sv
 1378786642 /projects/dft2005fall/bgreene/vcs/amd64/lib/vcsd.tab
@@ -677,4 +666,4 @@ CMD=/projects/dft2005fall/bgreene/vcs/gui/dve/amd64/bin/dve.exe
 1378787154 /projects/dft2005fall/bgreene/vcs/amd64/lib/libvirsim.so
 1378786920 /projects/dft2005fall/bgreene/vcs/amd64/lib/liberrorinf.so
 1378786727 /projects/dft2005fall/bgreene/vcs/amd64/lib/libsnpsmalloc.so
-1385857626 simv.daidir
+1385868168 simv.daidir
