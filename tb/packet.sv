@@ -2,6 +2,7 @@
 `define PACKET__SV
 
 class packet extends uvm_sequence_item;
+//typedef enum { ROTATE,ZOOM} cmd_e;
 typedef enum { ROTATE,ZOOM,BLACKWHITE,BRIGHTNESS,INVERSION} cmd_e; 
 
   rand cmd_e  cmd;

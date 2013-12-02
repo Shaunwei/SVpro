@@ -4,4 +4,4 @@ tb/DVEfiles/
 tb/*.gz
 tb/*.vpd
 tb/*.key
-
+tb/.nfs*

@@ -30,19 +30,46 @@ ram ram(clk,WRITE0,WRITE1,READ0,READ1,addr_wr0,addr_wr1,addr_rd0,addr_rd1,datain
 reg data_valid,data_valid2,data_valid3,data_valid4,data_valid5,data_valid6,data_valid7;
 reg [63:0] data,data2,data3,data4,data5,data6,data7;
 reg [4:0] state;
-reg refresh;
-reg busy=0; 
+//reg refresh;
+//reg busy=0; 
 
-   reg [1:0] cmd_m =2'b00;
+//cmd module
+   reg [6:0] cmd_d;
+   reg [1:0] cmd_m;
+   reg 	     cmd_v;
+   reg 	     cmd_s;
    
-//initial refresh=0;
-
+   
+   assign cmd_ack = cmd_v?1:0;
+   assign error = cmd_s?0:1;
+   assign refresh = (addr_wr1==102399)?1:0;
+   assign busy =0;
+   
+initial
+  begin
+     //cmd_d =0;
+     //cmd_m =0;
+     cmd_v =0;
+     cmd_s =1;
+  end
+   
    
 always @(*) begin
- refresh = (addr_wr1==102399) ;  
- 
+   if(cmd_valid==1 && cmd<4 && cmd_data<=90 && cmd_data>=0)begin
+      cmd_m <= cmd;
+      cmd_d <= cmd_data;
+      cmd_v<=1;
+   end
+   else if(cmd_valid==1)
+     cmd_s <=0;
+   
 end
 
+ 
+   
+//always @(*) refresh = (addr_wr1==102399) ;  
+
+   
 
 always @(*) begin
   case(cmd_m)
@@ -50,12 +77,15 @@ always @(*) begin
        //rotate
        data2 <= data4;
        data_valid2 <= data_valid4;
+       cmd_d <= cmd_data;
     end
     
     2'b01 : begin
        //zoom
        data2 <= data5;
        data_valid2 <= data_valid5;
+       if (cmd_data>= 1 && cmd_data<=10) cmd_d <=cmd_data;
+       else cmd_v<=0;
        end
     
     2'b10 : begin
@@ -82,8 +112,8 @@ end // always @ (*)
 
 read_mem read_orig(clk,rst_n,!cmd_valid,READ0,addr_rd0,dataout0,data,data_valid); 
 grayscale  grayscale_orig   (clk,data,data_valid, data6,data_valid6);//6 
-rotate #(10) rotate_orig (clk,data,data_valid, data4,data_valid4);//4
-zoom #(2) zoom_orig (clk,data,data_valid, data5,data_valid5);//5
+rotate rotate_orig (clk,data,data_valid, data4,data_valid4,cmd_d);//4
+zoom  zoom_orig (clk,data,data_valid, data5,data_valid5,cmd_d);//5
 inversion  inversion_orig (clk,data,data_valid, data7,data_valid7);//7
 write_mem #(131072) write_tmp  (clk,data2,data_valid2,WRITE0,addr_wr0, datain0);
 read_mem #(131072) read_tmp (clk,rst_n,(addr_rd0!=102399),READ1,addr_rd1,dataout1,data3,data_valid3);
@@ -172,13 +202,14 @@ module rotate (input clk,
 	       input [63:0] data, 
 	       input data_valid, 
 	       output reg [63:0] data2, 
-	       output reg data_valid2);
+	       output reg data_valid2,
+	       input [6:0] angle);
    
   // parameter ERROR=0;
-   parameter ANGLE=10;
+  // parameter ANGLE=10;
    wire [6:0] sin, cos;
    
-   sintable sin_cos(clk, ANGLE,sin,cos); 
+   sintable sin_cos(clk, angle,sin,cos); 
    
    always @(posedge clk) begin
       data2[49:41] <= ( cos*(data[49:41]-160) + sin*(data[40:32]-160))/64 +160;
@@ -203,13 +234,14 @@ module zoom (input clk,
 	     input [63:0] data, 
 	     input data_valid, 
 	     output reg [63:0] data2, 
-	     output reg data_valid2);
+	     output reg data_valid2,
+	     input [6:0] zoom);
   // parameter ERROR=0;
-   parameter ZOOM=10;
+  // parameter ZOOM=10;
          
    always @(posedge clk) begin
-      data2[49:41] <= (data[49:41]-160)/ZOOM+160;
-      data2[40:32] <= (data[40:32]-160)/ZOOM+160;
+      data2[49:41] <= (data[49:41]-160)/zoom+160;
+      data2[40:32] <= (data[40:32]-160)/zoom+160;
       end
    
    always @(posedge clk)begin
