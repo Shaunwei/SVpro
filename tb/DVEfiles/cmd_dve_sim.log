@@ -1,4 +1,3 @@
-ucliGUI::start /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv -ucligui +UVM_TESTNAME=test_rotate
 set ucliGUI::state
 set ucliGUI::state
 ucliCore::getToolPID
@@ -11,110 +10,37 @@ synopsys::xml set_only_active_frame <data value="1" />
 synopsys::xml set_variable_frame_id <data value="1" />
 synUtils::setDVEInitPhase 1
 synopsys::dump -type VPD -file /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/inter.vpd -locking
-synopsys::dump -autoflush on -fid VPD4
-set ::dve_fid VPD4
+synopsys::dump -autoflush on -fid VPD0
+set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket linux60814 40963
-synUtils::sendTool -active {_icl_start_rpc -version "H-2013.06-3_Full64" -sync_file /tmp/vcs_dve_rpc.xwei.6084}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.xwei.6084}
+synUtils::sendTool -active _icl_setToolSocket linux60815 54537
+synUtils::sendTool -active {_icl_start_rpc -version "H-2013.06-3_Full64" -sync_file /tmp/vcs_dve_rpc.xwei.3187}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.xwei.3187}
+ucliGUI::vpdAddHierarchy -scope uvm_pkg -depth 1 -file /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/inter.vpd; synopsys::dump -flush VPD0
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
 config syscaddsourcenames
 config syscaddstructtypes
 synopsys::listing -disable
-# Begin_DVE_Session_Save_Info
-# DVE restart session
-# Saved on Sat Nov 30 23:14:18 2013
-# Designs open: 1
-#   Sim: /DCNFS/users/student/xwei/Desktop/ELEN603/final/IMAGEPROC/tb/simv
-# Toplevel windows open: 1
-# 	TopLevel.1
-#   Wave.1: 31 signals
-#   Schematic.2: imageproc_test_top.dut
-#   Schematic.1: imageproc_test_top.dut
-#   Source.1: imageproc_test_top
-#   Group count = 2
-#   Group dut signal count = 31
-#   Group Group1 signal count = 1
-# End_DVE_Session_Save_Info
-# DVE version: H-2013.06-3_Full64
-# DVE build date: Sep  9 2013 21:31:29
-#<Session mode="Restart" path=".restartSimSession.tcl" type="Debug">
-# Application preferences
-#<WindowLayout>
-# DVE top-level session
-# Create and position top-level window: TopLevel.1
-set TopLevel.1 TopLevel.1
-# Docked window settings
-set HSPane.1 HSPane.1
-set Hier.1 Hier.1
-set Stack.1 Stack.1
-set Class.1 Class.1
-set Object.1 Object.1
-set DLPane.1 DLPane.1
-set Data.1 Data.1
-set Local.1 Local.1
-set Member.1 Member.1
-set Console.1 Console.1
-# MDI window settings
-set Source.1 Source.1
-set Wave.1 Wave.1
-set Schematic.1 [gui_create_window -type {Schematic}  -parent ${TopLevel.1} -defer_create_taskbar_icon]
-set setting [::Misc::Setting::create -array DveSchematicSettings]
-Misc::init_window $setting ${Schematic.1}
-::Misc::exec_method -window ${Schematic.1} -method captionCmd
-set Schematic.2 [gui_create_window -type {Schematic}  -parent ${TopLevel.1} -defer_create_taskbar_icon]
-set setting [::Misc::Setting::create -array DveSchematicSettings]
-Misc::init_window $setting ${Schematic.2}
-::Misc::exec_method -window ${Schematic.2} -method captionCmd
-# End MDI window settings
-#</WindowLayout>
-#<Database>
-#</Database>
-# DVE Global setting session:
-# Global: Breakpoints
-# Global: Bus
-# Global: Expressions
-# Global: Signal Time Shift
-# Global: Signal Compare
-# Global: Signal Groups
-set _session_group_5 dut
-set dut "$_session_group_5"
-set _session_group_6 Group1
-set Group1 "$_session_group_6"
-# Global: Highlighting
-# Global: Stack
-# Post database loading setting...
-# Restore C1 time
-# Save global setting...
-# Wave/List view global setting
-# Close all empty TopLevel windows
-foreach __top [gui_ekki_get_window_ids -type TopLevel] {     if { [llength [gui_ekki_get_window_ids -parent $__top]] == 0} {         gui_close_window -window $__top     } }
-# DVE View/pane content session:
-# Hier 'Hier.1'
-catch {gui_list_select -id ${Hier.1} {imageproc_test_top}}
-# Class 'Class.1'
-# Member 'Member.1'
-# Data 'Data.1'
-# Source 'Source.1'
-synopsys::dump -add {imageproc_test_top.sigs } -aggregates  -fid VPD4
-synopsys::dump -add {imageproc_test_top.sigs.driver imageproc_test_top.sigs.imon } -aggregates  -fid VPD4
-ucliGUI::getSignalValues -scope imageproc_test_top -radix {decimal binary binary binary hexadecimal hexadecimal binary binary binary binary binary } -list {imageproc_test_top.simulation_cycle imageproc_test_top.SystemClock imageproc_test_top.sigs.clk imageproc_test_top.sigs.rst_n {imageproc_test_top.sigs.cmd[3:0]} {imageproc_test_top.sigs.cmd_data[7:0]} imageproc_test_top.sigs.cmd_valid imageproc_test_top.sigs.cmd_ack imageproc_test_top.sigs.busy imageproc_test_top.sigs.refresh imageproc_test_top.sigs.error }
-# Warning: Class view not found.
-# View 'Wave.1'
-set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
-set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
-set origGroupCreationState [gui_list_create_group_when_add -wave]
-synopsys::dump -add {_vcs_unit__786459216 imageproc_test_top.dut.READ0 imageproc_test_top.dut.READ1 imageproc_test_top.dut.WRITE0 imageproc_test_top.dut.WRITE1 imageproc_test_top.dut.addr_rd0 imageproc_test_top.dut.addr_rd1 imageproc_test_top.dut.addr_wr0 imageproc_test_top.dut.addr_wr1 imageproc_test_top.dut.busy imageproc_test_top.dut.clk imageproc_test_top.dut.cmd imageproc_test_top.dut.cmd_ack imageproc_test_top.dut.cmd_data imageproc_test_top.dut.cmd_valid imageproc_test_top.dut.data imageproc_test_top.dut.data2 imageproc_test_top.dut.data3 imageproc_test_top.dut.data4 imageproc_test_top.dut.data_valid imageproc_test_top.dut.data_valid2 imageproc_test_top.dut.data_valid3 imageproc_test_top.dut.data_valid4 imageproc_test_top.dut.datain0 imageproc_test_top.dut.datain1 imageproc_test_top.dut.dataout0 imageproc_test_top.dut.dataout1 imageproc_test_top.dut.error imageproc_test_top.dut.refresh imageproc_test_top.dut.rst_n imageproc_test_top.dut.state } -aggregates  -fid VPD4
-if {$origGroupCreationState} { 	gui_list_create_group_when_add -wave -enable }
-if { $groupExD } {  gui_msg_report -code DVWW028 }
-# View 'Schematic.1'
-# Create schematic window 'Schematic.1'
-# View 'Schematic.2'
-# Create schematic window 'Schematic.2'
-# Restore toplevel window zorder
-# The toplevel window could be closed if it has no view/pane
-if {[gui_exist_window -window ${TopLevel.1}]} { 	gui_set_active_window -window ${TopLevel.1} 	gui_set_active_window -window ${Source.1} }
-#</Session>
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/dve/schematic.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/base.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/enable.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/netlist.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/method.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/strokes/stroke_defaults.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/dialogs/ObjectListInfo.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/common/schematic/DialogPathSchematicFanInOut.tcl
+tcl_source /projects/dft2005fall/bgreene/vcs/gui/dve/auxx/gui/dve/driversloads.tcl
+synopsys::dump -add {imageproc_test_top.dut} -scope "." -depth 1 -fid VPD0
+synopsys::dump -add {_vcs_unit__786459216 } -aggregates  -fid VPD0
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set synopsys::env(time) 245471500
+set synopsys::env(time) 708464000
+set ucliGUI::state
+set ucliGUI::state
+synopsys::xml get_stop_data
+synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
