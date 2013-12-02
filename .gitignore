@@ -1,0 +1,7 @@
+tb/csrc/
+tb/simv.daidir/
+tb/DVEfiles/
+tb/*.gz
+tb/*.vpd
+tb/*.key
+
